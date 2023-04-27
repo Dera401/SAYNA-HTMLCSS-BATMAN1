@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  color: #ffffff;
+}
+header {
+  background-image: url("Assets/Illustrations/Bathome1.png");
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+
+aside > * {
+  display: block;
+}

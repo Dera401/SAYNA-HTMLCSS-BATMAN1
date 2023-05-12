@@ -1,16 +1,159 @@
-/* body {
+/* importation des police google font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@400;700&display=swap');
+
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  background: url(./Assets/Illustrations/Bathome1.png) no-repeat;
+  background-size: 90% auto;
+  background-position-x: center;
   background-color: black;
-  color: #ffffff;
-}
-header {
-  background-image: url("Assets/Illustrations/Bathome1.png");
-  background-repeat: no-repeat;
-  height: 1000px;
+  color: white;
+  text-align: justify;
+  /* definition police 
+  font-family: 'Rajdhani', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+  */
 }
 
-aside > * {
+/* definition des polices */
+/* bouton et titre H1 */
+
+li a, h2 {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#ancre li a {
+  text-decoration: none;
+}
+
+li a {
+  font-size: 20px;
+  color: white;
+}
+
+
+h2 {
+  font-size: 36px;
+}
+
+p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  width: 80%;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* commencement de l'entete */
+header {
+  margin-top: 70px;
+  border: 1px solid wheat;
+}
+
+/* logo batman et bouton home */
+.logoHome {
+  margin-left: 200px;
+  float: left;
+  border: 1px solid wheat;
+}
+
+#home {
+  width: 150px;
+  position: relative;
+  /* relative ou absolue */
+  left: 80%;
+  top: -20px;
+  border: 1px white solid;
+}
+
+#home ul li {
+  list-style: none;
+  width: 80px;
+  border: 1px white solid;
+}
+
+/* navigation fixed */
+#navigationDroite img {
   display: block;
-} */
-img {
-  background-color: black;
+  margin-top: 30px;
+  position: relative;
+
+}
+
+#navigationDroite {
+  position: fixed;
+  right: 150px;
+  top: 350px;
+  border: 1px white solid;
+
+}
+
+.logoDroite {
+  padding-left: 40px;
+
+}
+
+/* pseudoclass lien  non resolu*/
+a .logoHome:hover {
+  /* filter: hsl(60, 100%, 50%); */
+
+}
+
+/* section intro */
+.intro {
+  width: 620px;
+  text-align: center;
+  margin: 250px auto;
+  padding-left: 20px;
+  /* border: 1px white solid; */
+
+}
+
+#ancre ul {
+  display: flex;
+  padding: 0;
+
+}
+
+.first {
+  margin-right: 50px;
+}
+
+#ancre ul li {
+  list-style: none;
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 30%, rgba(137, 0, 8, 0.4) 100%);
+  padding: 20px 40px;
+
+}
+
+/* fleche bas */
+.flechedw {
+  position: relative;
+  left: 45%;
+}
+
+.robert, .christian, .riddler, .jocker, .alfred, .catwoman {
+  margin-right: 80px;
+}
+
+.carte1, .carte2, .carte3, .multimed {
+  display: flex;
+}
+
+.debutBat img {
+  float: left;
+}
+
+.league, video {
+  max-width: 100%;
+}
+
+
+.batDroite {
+  position: relative;
+  left: 50%;
 }

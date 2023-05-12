@@ -20,8 +20,12 @@ body {
 /* definition des polices */
 /* bouton et titre H1 */
 
-li a, h2 {
+li a, h2, h3 {
   font-family: 'Rajdhani', sans-serif;
+}
+
+p {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 #ancre li a {
@@ -36,29 +40,39 @@ li a {
 
 h2 {
   font-size: 36px;
+  margin: 100px 10px 10px 0;
 }
 
 p {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  width: 80%;
+  width: 70%;
 }
 
 h3 {
+  font-size: 18px;
   text-align: center;
+}
+
+em {
+  font-style: initial;
+  color: #f8f184;
+  font-weight: bold;
+}
+
+strong {
+  font-weight: 100;
+  font-size: 18px;
 }
 
 /* commencement de l'entete */
 header {
   margin-top: 70px;
-  border: 1px solid wheat;
 }
 
 /* logo batman et bouton home */
 .logoHome {
   margin-left: 200px;
   float: left;
-  border: 1px solid wheat;
 }
 
 #home {
@@ -67,13 +81,11 @@ header {
   /* relative ou absolue */
   left: 80%;
   top: -20px;
-  border: 1px white solid;
 }
 
 #home ul li {
   list-style: none;
   width: 80px;
-  border: 1px white solid;
 }
 
 /* navigation fixed */
@@ -88,8 +100,6 @@ header {
   position: fixed;
   right: 150px;
   top: 350px;
-  border: 1px white solid;
-
 }
 
 .logoDroite {
@@ -103,13 +113,14 @@ a .logoHome:hover {
 
 }
 
+
+
 /* section intro */
 .intro {
   width: 620px;
   text-align: center;
   margin: 250px auto;
   padding-left: 20px;
-  /* border: 1px white solid; */
 
 }
 
@@ -130,30 +141,147 @@ a .logoHome:hover {
 
 }
 
+/* pseudo class de section intro */
+#ancre ul li:hover {
+  background: linear-gradient(90deg, rgba(237, 222, 191, 1) 30%, rgba(137, 0, 8, 1) 100%);
+}
+
 /* fleche bas */
 .flechedw {
   position: relative;
   left: 45%;
 }
 
+/* section Batman au cinema */
+
+/* section Nemesis */
+#nemesis>img {
+  position: absolute;
+  width: 200px;
+  margin-left: 50px;
+  margin-top: -100px;
+
+}
+
+
+/* section allié */
+
+.batDroite {
+  float: right;
+  position: relative;
+  right: 150px;
+  bottom: 260px;
+}
+
+/* section ligue des justiciers*/
+
+/* section bande annonce  */
+
+.multimed {
+  margin: 90px;
+}
+
+.description {
+  margin-left: 155px;
+  margin-bottom: 100px;
+  padding: 4px 10px;
+  width: 420px;
+  background-color: #19587d;
+  border-radius: 0 10px 10px 0;
+}
+
+.description p {
+  width: 400px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.ensemble {
+  position: relative;
+  left: 200px;
+  width: 600px;
+}
+
+/* fleche de la carouselle */
+.ensemble+div img {
+
+  position: relative;
+  left: 370px;
+  top: 70px;
+}
+
+.multimed div .flecheG {
+  position: relative;
+  top: 70px;
+}
+
+/* section interractif */
+
+/* section citation */
+.conteneur {
+  width: 800px;
+  margin: 100px auto;
+
+}
+
+.citation {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.citation p {
+  padding-left: 110px;
+  text-align: center;
+}
+
+cite, footer div p {
+  font-size: 12px;
+  font-style: normal;
+}
+
+div img[alt="guillemet ouvrant"], div img[alt="guillemet fermant"] {
+  margin: 50px;
+}
+
+div img[alt="guillemet fermant"] {
+  position: relative;
+  left: 600px;
+}
+
+/* footer */
+img[alt="logo Warner Bross"] {
+  float: left;
+}
+
+footer div {
+  margin-left: 350px;
+}
+
+.logofoot {
+  width: 700px;
+  padding-left: 180px;
+}
+
+.logofoot img {
+  margin: 10px;
+}
+
+/* definition de marge des cartes */
 .robert, .christian, .riddler, .jocker, .alfred, .catwoman {
   margin-right: 80px;
 }
 
+/* mise en place des elements enfants en flex */
 .carte1, .carte2, .carte3, .multimed {
   display: flex;
 }
 
+/* section multimedia */
 .debutBat img {
   float: left;
 }
 
+/* definition du non debordement de la largeur */
 .league, video {
   max-width: 100%;
-}
-
-
-.batDroite {
-  position: relative;
-  left: 50%;
 }

@@ -1,16 +1,23 @@
 /* importation des police google font */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@400;700&display=swap');
 
+/* vision de bordure */
+/* * {
+  border: solid 2px red;
+} */
 
 body {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
   background: url(./Assets/Illustrations/Bathome1.png) no-repeat;
   background-size: 90% auto;
   background-position-x: center;
   background-color: black;
   color: white;
   text-align: justify;
+  border: solid 3px #c4c4c41b;
   /* definition police 
   font-family: 'Rajdhani', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
@@ -45,7 +52,7 @@ h2 {
 
 p {
   font-size: 18px;
-  width: 70%;
+  width: 80%;
 }
 
 h3 {
@@ -64,9 +71,14 @@ strong {
   font-size: 18px;
 }
 
+section {
+  padding-left: 40px;
+}
+
 /* commencement de l'entete */
 header {
   margin-top: 70px;
+  border-bottom: solid 3px #c4c4c41b;
 }
 
 /* logo batman et bouton home */
@@ -100,6 +112,7 @@ header {
   position: fixed;
   right: 150px;
   top: 350px;
+  z-index: 10;
 }
 
 .logoDroite {
@@ -108,10 +121,10 @@ header {
 }
 
 /* pseudoclass lien  non resolu*/
-a .logoHome:hover {
-  /* filter: hsl(60, 100%, 50%); */
+/* a .logoHome:hover {} */
+/* filter: hsl(60, 100%, 50%); */
 
-}
+
 
 
 
@@ -148,6 +161,7 @@ a .logoHome:hover {
 
 /* fleche bas */
 .flechedw {
+  width: 100px;
   position: relative;
   left: 45%;
 }
@@ -167,10 +181,9 @@ a .logoHome:hover {
 /* section allié */
 
 .batDroite {
-  float: right;
-  position: relative;
-  right: 150px;
-  bottom: 260px;
+  position: absolute;
+  margin-top: -260px;
+  left: 940px;
 }
 
 /* section ligue des justiciers*/
@@ -186,7 +199,7 @@ a .logoHome:hover {
   margin-bottom: 100px;
   padding: 4px 10px;
   width: 420px;
-  background-color: #19587d;
+  background: linear-gradient(158deg, rgba(237, 222, 191, 1) 0%, rgba(25, 88, 125, 1) 60%);
   border-radius: 0 10px 10px 0;
 }
 
@@ -274,6 +287,17 @@ footer div {
 /* mise en place des elements enfants en flex */
 .carte1, .carte2, .carte3, .multimed {
   display: flex;
+  margin-top: 80px;
+}
+
+#ligue div {
+  width: 1400px;
+  position: relative;
+  right: 145px;
+}
+
+.league {
+  margin-top: 80px;
 }
 
 /* section multimedia */

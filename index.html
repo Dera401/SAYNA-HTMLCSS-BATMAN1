@@ -21,13 +21,16 @@
             </ul>
         </nav>
         <div id="navigationDroite">
-            <img src="Assets/Logos/logo_bat_flèche.png" alt="fleche haut" />
+            <a href="#home"><img src="Assets/Logos/logo_bat_flèche.png" alt="fleche haut" /></a>
             <div class="logoDroite">
-                <img src="Assets/Logos/icon_facebook.png" alt="logo Facebook" />
-                <img src="Assets/Logos/icon_ig.png" alt="logo Instagram" />
-                <img src="Assets/Logos/icon_tw.png" alt="logo Twitter" />
+                <a href="https://www.facebook.com" target="_blank"><img src="Assets/Logos/icon_facebook.png"
+                        alt="logo Facebook" /></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="Assets/Logos/icon_ig.png"
+                        alt="logo Instagram" /></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="Assets/Logos/icon_tw.png"
+                        alt="logo Twitter" /></a>
             </div>
-            <img src="Assets/Logos/logo_bat_flèche_2.png" alt="fleche bas" />
+            <a href="#form"><img src="Assets/Logos/logo_bat_flèche_2.png" alt="fleche bas" /></a>
         </div>
 
     </header>
@@ -207,32 +210,42 @@
         </section>
 
         <!--section interractif-->
-        <section>
-            <h2>PRENONS CONTACT</h2>
-            <form action="">
-                <label for="mail">ADRESSSE EMAIL</label><br><input id="mail" type="email"
-                    placeholder="Adresse email"><br>
+        <section id="form">
+            <div>
+                <h2>PRENONS CONTACT</h2>
+                <div>
+                    <form action="">
+                        <p class="titre"><label for="mail">ADRESSSE EMAIL</label></p>
+                        <p><input id="mail" type="email" placeholder="Adresse email"></p>
 
-                <!-- regrouper par <fieldset></fieldset> et <legend></legend> -->
-                <label>NEWSLETTER</label><br>
-                <label>En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :
-                    <input type="checkbox"></label><br>
+                        <!-- regrouper par <fieldset></fieldset> et <legend></legend> -->
+                        <p class="titre"><label>NEWSLETTER</label></p>
+                        <p><label>En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures
+                                de Batman :<input type="checkbox"></label></p>
+                        <p><label class="frequence"> Choisissez la fréquence à laquelle vous souhaitez recevoir votre
+                                newsletter</label>
 
-                <label> la fréquence à laquelle vous souhaitez recevoir votre newsletter</label>
-                <select id="frequence">
-                    <option value="journalière">journalière</option>
-                    <option value="hebdomadaire">hebdomadaire</option>
-                </select><br>
-                <label>Souhaitez-vous recevoir des news</label><br>
-                <label for="films">Des films</label><input type="radio" name="choix" id="films">
-                <label for="comics">Des comics</label><input type="radio" name="choix" id="comics">
-                <label for="tout">De tout</label><input type="radio" name="choix" id="tout"><br>
+                            <select id="frequence">
+                                <option value="journalière">journalière</option>
+                                <option value="hebdomadaire">hebdomadaire</option>
+                            </select>
+                        </p>
 
-                <label>MESSAGE</label><br>
-                <textarea cols="30" rows="10" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                        <p><label>Souhaitez-vous recevoir des news</label></p>
+                        <div class="raidiobtn">
+                            <p><label for="films">Des films</label><input type="radio" name="choix" id="films"></p>
+                            <p><label for="comics">Des comics</label><input type="radio" name="choix" id="comics"></p>
+                            <p><label for="tout">De tout</label><input type="radio" name="choix" id="tout"></p>
+                        </div>
 
-                <input type="submit" value="CONFIRMER">
-            </form>
+                        <p class="titre"><label>MESSAGE</label></p>
+                        <textarea cols="75" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea>
+
+                        <div class="confirmbtn"><input type="submit" value="CONFIRMER"></div>
+                    </form>
+                </div>
+            </div>
+
 
         </section>
 

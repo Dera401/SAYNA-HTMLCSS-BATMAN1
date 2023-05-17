@@ -12,8 +12,9 @@
 <body>
     <header>
 
-        <a href="index.html"><img src="Assets/Logos/logohome.png" alt="logo emblématique de Batman"
-                class="logoHome" /></a>
+        <a onmouseover="changeImagelogoHome()" onmouseout="reset()" href="index.html"><img
+                src="Assets/Logos/logohome.png" alt="logo emblématique de Batman" id="idLogoHome"
+                class="logoHome jaune" /></a>
 
         <nav id="home">
             <ul>
@@ -21,7 +22,8 @@
             </ul>
         </nav>
         <div id="navigationDroite">
-            <a href="#home"><img src="Assets/Logos/logo_bat_flèche.png" alt="fleche haut" /></a>
+            <a href="#home" onmouseover="changeImageBatHaut()" onmouseout="reset()"><img id="batHaut"
+                    src="Assets/Logos/logo_bat_flèche.png" class="jaune" alt="fleche haut" /></a>
             <div class="logoDroite">
                 <a href="https://www.facebook.com" target="_blank"><img src="Assets/Logos/icon_facebook.png"
                         alt="logo Facebook" /></a>
@@ -30,7 +32,8 @@
                 <a href="https://www.twitter.com" target="_blank"><img src="Assets/Logos/icon_tw.png"
                         alt="logo Twitter" /></a>
             </div>
-            <a href="#form"><img src="Assets/Logos/logo_bat_flèche_2.png" alt="fleche bas" /></a>
+            <a href="#form" onmouseover="changeImageBatBas()" onmouseout="reset()"><img id="batBas"
+                    src="Assets/Logos/logo_bat_flèche_2.png" class="jaune" alt="fleche bas" /></a>
         </div>
 
     </header>
@@ -285,6 +288,31 @@
         </div>
 
     </footer>
+    <script>
+        function changeImagelogoHome() {
+
+            document.getElementById("idLogoHome").src = "Assets/Logos/logohome_jaune.png";
+        }
+
+        function changeImageBatHaut() {
+
+            document.getElementById("batHaut").src = "Assets/Logos/logo_bat_flèche_jaune.png";
+        }
+
+        function changeImageBatBas() {
+
+            document.getElementById("batBas").src = "Assets/Logos/logo_bat_flèche_2_jaune.png";
+        }
+
+
+        function reset() {
+            const collecJaune = document.getElementsByClassName("jaune");
+            collecJaune[0].src = "Assets/Logos/logohome.png";
+            collecJaune[1].src = "Assets/Logos/logo_bat_flèche.png";
+            collecJaune[2].src = "Assets/Logos/logo_bat_flèche_2.png";
+        }
+
+    </script>
 </body>
 
 </html>

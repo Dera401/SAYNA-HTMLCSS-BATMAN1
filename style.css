@@ -1,16 +1,21 @@
 /* importation des police google font */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@400;700&display=swap');
 
-/* vision de bordure */
-/* * {
-  border: solid 2px red;
-} */
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+html {
+  font-size: 10px;
+}
 
 body {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 2%;
   background: url(./Assets/Illustrations/Bathome1.png) no-repeat;
   background-size: 90% auto;
   background-position-x: center;
@@ -39,31 +44,31 @@ p {
 }
 
 li a {
-  font-size: 20px;
+  font-size: 2rem;
   color: white;
 }
 
 
 h2 {
-  font-size: 36px;
+  font-size: 3.6rem;
   margin: 100px 10px 10px 0;
 }
 
 #form .titre {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 #form p {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.8rem;
   width: 80%;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -74,8 +79,13 @@ em {
 }
 
 strong {
-  font-weight: 100;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+strong.batman {
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 section {
@@ -84,27 +94,20 @@ section {
 
 /* commencement de l'entete */
 header {
-  margin-top: 70px;
+  margin-top: 5%;
   border-bottom: solid 3px #c4c4c41b;
 }
 
 /* logo batman et bouton home */
-.logoHome {
-  margin-left: 200px;
-  float: left;
-}
-
-#home {
-  width: 150px;
-  position: relative;
-  /* relative ou absolue */
-  left: 80%;
-  top: -20px;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6% 2% 6%;
 }
 
 #home ul li {
   list-style: none;
-  width: 80px;
 }
 
 #home ul li a:hover {
@@ -121,13 +124,13 @@ header {
 
 #navigationDroite {
   position: fixed;
-  right: 150px;
-  top: 350px;
+  right: 10%;
+  top: 50%;
   z-index: 10;
 }
 
 .logoDroite {
-  padding-left: 40px;
+  padding-left: 40%;
 
 }
 
@@ -159,7 +162,7 @@ header {
 
 /* pseudo class de section intro */
 #ancre ul li:hover {
-  background: linear-gradient(90deg, rgba(237, 222, 191, 1) 30%, rgba(137, 0, 8, 1) 100%);
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
 }
 
 /* fleche bas */
@@ -186,7 +189,7 @@ header {
 .batDroite {
   position: absolute;
   margin-top: -260px;
-  left: 940px;
+  left: 960px;
 }
 
 /* section ligue des justiciers*/
@@ -194,41 +197,36 @@ header {
 /* section bande annonce  */
 
 .multimed {
-  margin: 90px;
+  display: flex;
+  margin: 80px 40px 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ensemble {
+  margin-bottom: 100px;
 }
 
 .description {
   margin-left: 155px;
-  margin-bottom: 100px;
   padding: 4px 10px;
   width: 420px;
-  background: linear-gradient(158deg, rgba(237, 222, 191, 1) 0%, rgba(25, 88, 125, 1) 60%);
+  background: linear-gradient(158deg, rgba(237, 222, 191, 0.4) 0%, rgba(25, 88, 125, 0.4) 60%);
   border-radius: 0 10px 10px 0;
 }
 
 .description p {
   width: 400px;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-align: left;
 }
 
-.ensemble {
-  position: relative;
-  left: 200px;
-  width: 600px;
-}
-
 /* fleche de la carouselle */
-.ensemble+div img {
 
-  position: relative;
-  left: 370px;
-  top: 70px;
-}
 
-.multimed div .flecheG {
-  position: relative;
-  top: 70px;
+/* fleche droite */
+.ensemble+div img, .multimed div .flecheG {
+  padding-bottom: 80px;
 }
 
 .debutBat img {
@@ -236,20 +234,13 @@ header {
 }
 
 /* section interractif */
-/* #form * {
-  border: 1px solid red;
-} */
 
 #form {
-  background-image: linear-gradient(158deg, rgba(237, 222, 191, 1) 0%, rgba(25, 88, 125, 1) 60%);
+  background-image: linear-gradient(158deg, rgba(237, 222, 191, 0.4) 0%, rgba(25, 88, 125, 0.4) 60%);
   margin-top: 150px;
   padding-top: 40px;
 }
 
-/*form, p {
- margin: 0;
-  padding: 0; 
-}*/
 
 /* centrage du contenu du formulaire */
 #form>div {
@@ -262,9 +253,30 @@ header {
   margin: 0 0 50px 0;
 }
 
-/* a revoir */
-.radiobtn p {
-  display: inline-block;
+/* didposition flex des p dans input */
+.radiobtn {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding-left: 20px;
+  margin-left: 15%;
+}
+
+/* cadre des label */
+.radiobtn label {
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 30%, rgba(137, 0, 8, 0.4) 100%);
+  font-family: 'Rajdhani', sans-serif;
+  padding: 10px 20px;
+
+}
+
+.radiobtn label:hover {
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
+}
+
+/* pour enlever les bouton du radio */
+input#comics, input#films, input#tout {
+  appearance: none;
 }
 
 .titre {
@@ -281,24 +293,34 @@ input[type="email"], .frequence, textarea {
 }
 
 /* bouton confirmer, reste le hover */
+
 .confirmbtn input {
+  all: initial;
   background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 30%, rgba(137, 0, 8, 0.4) 100%);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   color: white;
   padding: 15px 40px;
   margin: 30px;
+  position: relative;
+  left: 30%;
+}
+
+
+.confirmbtn input:hover {
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
 }
 
 /* section citation */
+
 .conteneur {
-  width: 800px;
+  width: 70%;
   margin: 100px auto;
 
 }
 
 .citation {
   margin: 0 auto;
-  width: 700px;
+  width: 70%;
 }
 
 .citation p {
@@ -307,7 +329,7 @@ input[type="email"], .frequence, textarea {
 }
 
 cite, footer div p {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-style: normal;
 }
 
@@ -317,7 +339,7 @@ div img[alt="guillemet ouvrant"], div img[alt="guillemet fermant"] {
 
 div img[alt="guillemet fermant"] {
   position: relative;
-  left: 600px;
+  left: 75%;
 }
 
 /* footer */
@@ -326,12 +348,12 @@ img[alt="logo Warner Bross"] {
 }
 
 footer div {
-  margin-left: 350px;
+  margin-left: 25%;
 }
 
 .logofoot {
-  width: 700px;
-  padding-left: 180px;
+  width: 80%;
+  padding-left: 13%;
 }
 
 .logofoot img {
@@ -343,21 +365,17 @@ footer div {
   width: 110%;
 }
 
-/* definition de marge des cartes */
-.robert, .christian, .riddler, .jocker, .alfred, .catwoman {
-  margin-right: 80px;
-}
-
 /* mise en place des elements enfants en flex */
-.carte1, .carte2, .carte3, .multimed {
+.carte1, .carte2, .carte3 {
   display: flex;
   margin-top: 80px;
+  justify-content: space-between;
 }
 
 #ligue div {
   width: 1400px;
   position: relative;
-  right: 145px;
+  right: 15%;
 }
 
 .league {

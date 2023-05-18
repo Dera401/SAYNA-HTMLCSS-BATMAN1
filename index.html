@@ -11,12 +11,10 @@
 
 <body>
     <header>
-
-        <a onmouseover="changeImagelogoHome()" onmouseout="reset()" href="index.html"><img
-                src="Assets/Logos/logohome.png" alt="logo emblématique de Batman" id="idLogoHome"
-                class="logoHome jaune" /></a>
-
         <nav id="home">
+            <a onmouseover="changeImagelogoHome()" onmouseout="reset()" href="index.html"><img
+                    src="Assets/Logos/logohome.png" alt="logo emblématique de Batman" id="idLogoHome"
+                    class="logoHome jaune" /></a>
             <ul>
                 <li><a href="index.html">HOME</a></li>
             </ul>
@@ -25,12 +23,14 @@
             <a href="#home" onmouseover="changeImageBatHaut()" onmouseout="reset()"><img id="batHaut"
                     src="Assets/Logos/logo_bat_flèche.png" class="jaune" alt="fleche haut" /></a>
             <div class="logoDroite">
-                <a href="https://www.facebook.com" target="_blank"><img src="Assets/Logos/icon_facebook.png"
+                <a href="https://www.facebook.com" onmouseover="changeImageFb()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_facebook.png" id="fb" class="jaune"
                         alt="logo Facebook" /></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="Assets/Logos/icon_ig.png"
+                <a href="https://www.instagram.com" onmouseover="changeImageIg()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_ig.png" id="ig" class="jaune"
                         alt="logo Instagram" /></a>
-                <a href="https://www.twitter.com" target="_blank"><img src="Assets/Logos/icon_tw.png"
-                        alt="logo Twitter" /></a>
+                <a href="https://www.twitter.com" onmouseover="changeImageTw()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_tw.png" id="tw" class="jaune" alt="logo Twitter" /></a>
             </div>
             <a href="#form" onmouseover="changeImageBatBas()" onmouseout="reset()"><img id="batBas"
                     src="Assets/Logos/logo_bat_flèche_2.png" class="jaune" alt="fleche bas" /></a>
@@ -44,7 +44,7 @@
                 Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle
                 contre les criminels de Gotham City. Il est vengeur. Il est la nuit.
             </p>
-            <p><strong>Il est Batman.</strong></p>
+            <p><strong class="batman">Il est Batman.</strong></p>
 
             <div id="ancre">
                 <ul>
@@ -235,10 +235,10 @@
                         </p>
 
                         <p><label>Souhaitez-vous recevoir des news</label></p>
-                        <div class="raidiobtn">
-                            <p><label for="films">Des films</label><input type="radio" name="choix" id="films"></p>
-                            <p><label for="comics">Des comics</label><input type="radio" name="choix" id="comics"></p>
-                            <p><label for="tout">De tout</label><input type="radio" name="choix" id="tout"></p>
+                        <div class="radiobtn">
+                            <label for="films">Des films</label><input type="radio" name="choix" id="films">
+                            <label for="comics">Des comics</label><input type="radio" name="choix" id="comics">
+                            <label for="tout">De tout</label><input type="radio" name="choix" id="tout">
                         </div>
 
                         <p class="titre"><label>MESSAGE</label></p>
@@ -279,16 +279,24 @@
                 Version Nolan & Snyder & Reeves</p>
         </div>
         <div class="logofoot">
-            <img src="Assets/Logos/logo_sayna_white.png" alt="logo SAYNA" />
-            <img src="Assets/Logos/icon_x.png" alt="logo x" />
-            <img src="Assets/Logos/icon_DC.png" alt="logo DC" />
-            <img src="Assets/Logos/icon_facebook.png" alt="logo Facebook" />
-            <img src="Assets/Logos/icon_ig.png" alt="logo Instagram" />
-            <img src="Assets/Logos/icon_tw.png" alt="logo Twitter" />
+            <a href="#" onmouseover="changeSaynaFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="SaynaFooter" src="Assets/Logos/logo_sayna_white.png" alt="logo SAYNA" /></a>
+            <a href="#" onmouseover="changeXfooter()" onmouseout="resetFooter()"><img class="jaune_footer" id="xFooter"
+                    src="Assets/Logos/icon_x.png" alt="logo x" /></a>
+            <a href="#" onmouseover="changeDcFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="dcFotter" src="Assets/Logos/icon_DC.png" alt="logo DC" /></a>
+            <a href="#" onmouseover="changeFbFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="fbFooter" src="Assets/Logos/icon_facebook.png" alt="logo Facebook" /></a>
+            <a href="#" onmouseover="changeIgFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="igFooter" src="Assets/Logos/icon_ig.png" alt="logo Instagram" /></a>
+            <a href="#" onmouseover="changeTwFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="twFooter" src="Assets/Logos/icon_tw.png" alt="logo Twitter" /></a>
         </div>
 
     </footer>
     <script>
+
+        //changement couleur jaune logo fixed et home 
         function changeImagelogoHome() {
 
             document.getElementById("idLogoHome").src = "Assets/Logos/logohome_jaune.png";
@@ -304,14 +312,66 @@
             document.getElementById("batBas").src = "Assets/Logos/logo_bat_flèche_2_jaune.png";
         }
 
+        function changeImageFb() {
 
+            document.getElementById("fb").src = "Assets/Logos/icon_facebook_jaune.png";
+        }
+
+        function changeImageIg() {
+
+            document.getElementById("ig").src = "Assets/Logos/icon_ig_jaune.png";
+        }
+
+        function changeImageTw() {
+
+            document.getElementById("tw").src = "Assets/Logos/icon_tw_jaune.png";
+        }
+        //changement couleur jaune logo dans footer
+        function changeSaynaFooter() {
+            document.getElementById("SaynaFooter").src = "Assets/Logos/logo_sayna_white_jaune.png";
+        }
+
+        function changeXfooter() {
+            document.getElementById("xFooter").src = "Assets/Logos/icon_x_jaune.png";
+        }
+
+        function changeDcFooter() {
+            document.getElementById("dcFotter").src = "Assets/Logos/icon_DC_jaune.png";
+        }
+
+        function changeFbFooter() {
+            document.getElementById("fbFooter").src = "Assets/Logos/icon_facebook_jaune.png";
+        }
+
+        function changeIgFooter() {
+            document.getElementById("igFooter").src = "Assets/Logos/icon_ig_jaune.png";
+        }
+
+        function changeTwFooter() {
+            document.getElementById("twFooter").src = "Assets/Logos/icon_tw_jaune.png";
+        }
+
+        // reset couleur apres passage de la souris
         function reset() {
             const collecJaune = document.getElementsByClassName("jaune");
             collecJaune[0].src = "Assets/Logos/logohome.png";
             collecJaune[1].src = "Assets/Logos/logo_bat_flèche.png";
-            collecJaune[2].src = "Assets/Logos/logo_bat_flèche_2.png";
+            collecJaune[2].src = "Assets/Logos/icon_facebook.png";
+            collecJaune[3].src = "Assets/Logos/icon_ig.png";
+            collecJaune[4].src = "Assets/Logos/icon_tw.png";
+            collecJaune[5].src = "Assets/Logos/logo_bat_flèche_2.png";
         }
 
+        //reset pour le footer
+        function resetFooter() {
+            const collecJaune = document.getElementsByClassName("jaune_footer");
+            collecJaune[0].src = "Assets/Logos/logo_sayna_white.png";
+            collecJaune[1].src = "Assets/Logos/icon_x.png";
+            collecJaune[2].src = "Assets/Logos/icon_DC.png";
+            collecJaune[3].src = "Assets/Logos/icon_facebook.png";
+            collecJaune[4].src = "Assets/Logos/icon_ig.png";
+            collecJaune[5].src = "Assets/Logos/icon_tw.png";
+        }
     </script>
 </body>
 

@@ -60,7 +60,7 @@
 
         <!-- section Batman au cinema -->
         <section id="batmanAuCine">
-            <h2>BATMAN AU CINEMA</h2>
+            <h2 class="grand-titre">BATMAN AU CINÉMA</h2>
 
             <p>
                 Le personnage de Batman est un super héros de l’univers de DC
@@ -92,7 +92,7 @@
         <!--Section Nemesis-->
         <section id="nemesis">
             <img src="Assets/Illustrations/Bathome13.png" alt="gadjet">
-            <h2>NÉMÉSIS</h2>
+            <h2 class="grand-titre">NÉMÉSIS</h2>
             <p>
                 Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il
                 affrontera la plupart du temps, des vilains sans capacités
@@ -123,7 +123,7 @@
         <section>
             <img src="Assets/Illustrations/Bathome12.png" class="batDroite" alt="Batman coté droit">
 
-            <h2>ALLIÉS</h2>
+            <h2 class="grand-titre">ALLIÉS</h2>
             <p>
                 Alfred est le majordome des Wayne. A leur mort il s’occupe de
                 l’éducation du jeune Bruce avant de l’assister dans son rôle du
@@ -154,7 +154,7 @@
 
         <!--section Ligue des justiciers -->
         <section id="ligue">
-            <h2>JUSTICE LEAGUE</h2>
+            <h2 class="grand-titre">JUSTICE LEAGUE</h2>
             <p>
                 Lorsque la Terre est menacée les plus grands super-héros s’allient
                 pour la protéger. Ils doivent cependant apprendre à se faire confiance
@@ -171,7 +171,7 @@
 
         <!--section bande annonce-->
         <section>
-            <h2>MULTIMÉDIA</h2>
+            <h2 class="grand-titre">MULTIMÉDIA</h2>
             <div class="multimed">
                 <div>
                     <img src="Assets/Logos/icon_flèche_1.png" class="flecheG" alt="fleche gauche" />
@@ -215,38 +215,45 @@
         <!--section interractif-->
         <section id="form">
             <div>
-                <h2>PRENONS CONTACT</h2>
-                <div>
-                    <form action="">
-                        <p class="titre"><label for="mail">ADRESSSE EMAIL</label></p>
-                        <p><input id="mail" type="email" placeholder="Adresse email"></p>
+                <h2 class="grand-titre">PRENONS CONTACT</h2>
+                <form>
+                    <label class="titre" for="mail">ADRESSSE EMAIL</label>
+                    <input id="mail" type="email" placeholder="Adresse email">
 
-                        <!-- regrouper par <fieldset></fieldset> et <legend></legend> -->
-                        <p class="titre"><label>NEWSLETTER</label></p>
-                        <p><label>En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures
-                                de Batman :<input type="checkbox"></label></p>
-                        <p><label class="frequence"> Choisissez la fréquence à laquelle vous souhaitez recevoir votre
-                                newsletter</label>
+                    <!-- regrouper par <fieldset></fieldset> et <legend></legend> -->
+                    <label class="titre">NEWSLETTER</label>
+                    <label>En cochant cette case vous acceptez de recevoir l’actualité concernant les <br> aventures
+                        de Batman :<input type="checkbox"></label>
+                    <div><label class="frequence"> Choisissez la fréquence à laquelle vous souhaitez recevoir votre
+                            newsletter <img class="select-fleche" src="./Assets/Logos/icon_flèche_2.png"
+                                alt="fleche"></label>
 
-                            <select id="frequence">
-                                <option value="journalière">journalière</option>
-                                <option value="hebdomadaire">hebdomadaire</option>
-                            </select>
-                        </p>
+                        <!-- <select id="frequence">
+                            <option value="journalière">journalière</option>
+                            <option value="hebdomadaire">hebdomadaire</option>
+                        </select> -->
+                    </div>
 
-                        <p><label>Souhaitez-vous recevoir des news</label></p>
-                        <div class="radiobtn">
-                            <label for="films">Des films</label><input type="radio" name="choix" id="films">
-                            <label for="comics">Des comics</label><input type="radio" name="choix" id="comics">
-                            <label for="tout">De tout</label><input type="radio" name="choix" id="tout">
-                        </div>
+                    <label class="news">Souhaitez-vous recevoir des news</label>
+                    <div class="radiobtn">
+                        <label for="films">Des films</label><input type="radio" name="choix" id="films">
+                        <label for="comics">Des comics</label><input type="radio" name="choix" id="comics">
+                        <label for="tout">De tout</label><input type="radio" name="choix" id="tout">
+                    </div>
 
-                        <p class="titre"><label>MESSAGE</label></p>
-                        <textarea cols="75" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                    <label class="titre">MESSAGE</label>
+                    <textarea cols="75" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea>
 
-                        <div class="confirmbtn"><input type="submit" value="CONFIRMER"></div>
-                    </form>
+                    <div id="confirmbtn" class="confirmbtn"><input type="submit" value="CONFIRMER"></div>
+                </form>
+                <!-- essaie sur le popup -->
+                <div id="overlay" class="overlay">
+                    <div is="popup" class="popup">
+                        <h1 id="btnClose" class="btnClose">&times;</h1>
+                        <p>Message reçu</p>
+                    </div>
                 </div>
+
             </div>
 
 
@@ -371,6 +378,25 @@
             collecJaune[3].src = "Assets/Logos/icon_facebook.png";
             collecJaune[4].src = "Assets/Logos/icon_ig.png";
             collecJaune[5].src = "Assets/Logos/icon_tw.png";
+        }
+
+        // section popup
+        // enregistrement des variables necessaire à l'evenement 
+        var confirmbtn = document.getElementById('confirmbtn');
+        var btnClose = document.getElementById('btnClose');
+        var overlay = document.getElementById('overlay');
+
+        // definition de l'evenement ouverture de overlay
+        confirmbtn.addEventListener('click', ouvrirFenetre);
+
+        function ouvrirFenetre() {
+            overlay.style.display = 'block';
+        }
+
+        btnClose.addEventListener('click', fermerFenetre);
+
+        function fermerFenetre() {
+            overlay.style.display = 'none';
         }
     </script>
 </body>

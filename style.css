@@ -35,7 +35,7 @@ li a, h2, h3 {
   font-family: 'Rajdhani', sans-serif;
 }
 
-p {
+p, #form .titre, #form label {
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -54,11 +54,16 @@ h2 {
   margin: 100px 10px 10px 0;
 }
 
+.grand-titre {
+  font-weight: bolder;
+}
+
 #form .titre {
+  display: block;
   font-size: 2rem;
 }
 
-#form p {
+#form label {
   font-size: 1.2rem;
 }
 
@@ -112,6 +117,7 @@ nav {
 
 #home ul li a:hover {
   color: #ffff00;
+  font-weight: bold;
 }
 
 /* navigation fixed */
@@ -193,6 +199,15 @@ nav {
 }
 
 /* section ligue des justiciers*/
+#ligue div {
+  width: 1400px;
+  position: relative;
+  right: 15%;
+}
+
+.league {
+  margin-top: 80px;
+}
 
 /* section bande annonce  */
 
@@ -243,9 +258,15 @@ nav {
 
 
 /* centrage du contenu du formulaire */
+/* #form * {
+  border: #ffff00 solid 1px;
+} */
+
 #form>div {
+  position: relative;
   width: fit-content;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 #form h2 {
@@ -253,43 +274,57 @@ nav {
   margin: 0 0 50px 0;
 }
 
+.titre {
+  margin: 30px 0 10px 0;
+  padding: 0;
+}
+
+/* rotation de la fleche */
+img.select-fleche {
+  transform: rotate(90deg);
+  width: 15px;
+}
+
 /* didposition flex des p dans input */
 .radiobtn {
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  padding-left: 20px;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 20px;
   margin-left: 15%;
 }
 
 /* cadre des label */
 .radiobtn label {
-  background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 30%, rgba(137, 0, 8, 0.4) 100%);
+  border: 2px solid;
+  border-image: linear-gradient(158deg, rgba(237, 222, 191, 0.6) 0%, rgba(25, 88, 125, 0.6) 60%)10;
   font-family: 'Rajdhani', sans-serif;
   padding: 10px 20px;
-
+  cursor: pointer;
 }
 
 .radiobtn label:hover {
   background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
 }
 
+
 /* pour enlever les bouton du radio */
 input#comics, input#films, input#tout {
-  appearance: none;
+  opacity: 0;
 }
 
-.titre {
-  margin: 30px 0 10px 0;
-  padding: 0;
+textarea {
+  resize: none;
 }
 
 
-input[type="email"], .frequence, textarea {
+input[type="email"], .frequence, textarea, .news {
+  display: block;
   border: initial;
   width: 550px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
   border-bottom: 2px solid white;
+  padding: 25px 0 5px 0;
 }
 
 /* bouton confirmer, reste le hover */
@@ -300,14 +335,57 @@ input[type="email"], .frequence, textarea {
   font-family: 'Rajdhani', sans-serif;
   color: white;
   padding: 15px 40px;
-  margin: 30px;
-  position: relative;
-  left: 30%;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer;
 }
 
 
 .confirmbtn input:hover {
   background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
+}
+
+/* popup */
+
+/* fond semi transparent */
+.overlay {
+  background: linear-gradient(158deg, rgba(237, 222, 191, 0.2) 0%, rgba(25, 88, 125, 0.2) 60%), rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+
+}
+
+/* la box popup */
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 300px;
+  height: 200px;
+  margin: 15% auto;
+  background: linear-gradient(158deg, rgba(237, 222, 191, 0.6) 0%, rgba(25, 88, 125, 0.6) 60%), black;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.popup p {
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+}
+
+.btnClose {
+  align-self: flex-start;
+  cursor: pointer;
+  background-color: rgba(181, 2, 2, 0.784);
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 /* section citation */
@@ -324,7 +402,8 @@ input[type="email"], .frequence, textarea {
 }
 
 .citation p {
-  padding-left: 110px;
+  width: 100%;
+  padding: 0 40px;
   text-align: center;
 }
 
@@ -362,7 +441,7 @@ footer div {
 
 /* pseudo class sur les cartes */
 .carte1 img:hover, .carte2 img:hover, .carte3 img:hover {
-  width: 110%;
+  transform: scale(1.1);
 }
 
 /* mise en place des elements enfants en flex */
@@ -372,15 +451,6 @@ footer div {
   justify-content: space-between;
 }
 
-#ligue div {
-  width: 1400px;
-  position: relative;
-  right: 15%;
-}
-
-.league {
-  margin-top: 80px;
-}
 
 
 /* definition du non debordement de la largeur */
